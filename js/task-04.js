@@ -1,7 +1,7 @@
 let counterValue = document.getElementById("value")
 const container = document.getElementById("counter")
-const button1 = container.children[0]
-const button2 = container.children[2]
+const button1 = document.querySelector('[data-action="decrement"]')
+const button2 = document.querySelector('[data-action="increment"]')
 let value = 0;
 counterValue.textContent = value
 button1.addEventListener("click", decrement)
