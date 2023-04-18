@@ -7,17 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 const ulEL = document.getElementById("ingredients")
-// const fragment = document.createDocumentFragment();
-// for (const ingredient of ingredients) {
-//   const liEL = document.createElement("LI")
-//   liEL.classList.add('item')
-//   liEL.textContent = ingredient
-//   fragment.appendChild(liEL)
-// }
-// ulEL.appendChild(fragment)
-ingredients.map((ingredient) => {
-  const liEL = document.createElement("LI")
+const newList = [...ingredients].map((ingredient) => {
+  const liEL = document.createElement("Li")
   liEL.classList.add('item')
   liEL.textContent = ingredient
-  ulEL.append(liEL)
+  return liEL
 })
+ulEL.append(...newList)
